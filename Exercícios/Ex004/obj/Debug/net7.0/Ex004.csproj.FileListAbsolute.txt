@@ -1,0 +1,15 @@
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\bin\Debug\net7.0\Ex004.exe
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\bin\Debug\net7.0\Ex004.deps.json
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\bin\Debug\net7.0\Ex004.runtimeconfig.json
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\bin\Debug\net7.0\Ex004.dll
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\bin\Debug\net7.0\Ex004.pdb
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\obj\Debug\net7.0\Ex004.csproj.AssemblyReference.cache
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\obj\Debug\net7.0\Ex004.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\obj\Debug\net7.0\Ex004.AssemblyInfoInputs.cache
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\obj\Debug\net7.0\Ex004.AssemblyInfo.cs
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\obj\Debug\net7.0\Ex004.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\obj\Debug\net7.0\Ex004.dll
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\obj\Debug\net7.0\refint\Ex004.dll
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\obj\Debug\net7.0\Ex004.pdb
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\obj\Debug\net7.0\Ex004.genruntimeconfig.cache
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\Exercícios\Ex004\obj\Debug\net7.0\ref\Ex004.dll

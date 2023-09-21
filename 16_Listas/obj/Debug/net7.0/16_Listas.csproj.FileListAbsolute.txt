@@ -1,0 +1,15 @@
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\bin\Debug\net7.0\16_Listas.exe
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\bin\Debug\net7.0\16_Listas.deps.json
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\bin\Debug\net7.0\16_Listas.runtimeconfig.json
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\bin\Debug\net7.0\16_Listas.dll
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\bin\Debug\net7.0\16_Listas.pdb
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\obj\Debug\net7.0\16_Listas.csproj.AssemblyReference.cache
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\obj\Debug\net7.0\16_Listas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\obj\Debug\net7.0\16_Listas.AssemblyInfoInputs.cache
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\obj\Debug\net7.0\16_Listas.AssemblyInfo.cs
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\obj\Debug\net7.0\16_Listas.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\obj\Debug\net7.0\16_Listas.dll
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\obj\Debug\net7.0\refint\16_Listas.dll
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\obj\Debug\net7.0\16_Listas.pdb
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\obj\Debug\net7.0\16_Listas.genruntimeconfig.cache
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\16_Listas\obj\Debug\net7.0\ref\16_Listas.dll

@@ -1,0 +1,15 @@
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\bin\Debug\net7.0\15_Arquivos.exe
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\bin\Debug\net7.0\15_Arquivos.deps.json
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\bin\Debug\net7.0\15_Arquivos.runtimeconfig.json
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\bin\Debug\net7.0\15_Arquivos.dll
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\bin\Debug\net7.0\15_Arquivos.pdb
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\obj\Debug\net7.0\15_Arquivos.csproj.AssemblyReference.cache
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\obj\Debug\net7.0\15_Arquivos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\obj\Debug\net7.0\15_Arquivos.AssemblyInfoInputs.cache
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\obj\Debug\net7.0\15_Arquivos.AssemblyInfo.cs
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\obj\Debug\net7.0\15_Arquivos.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\obj\Debug\net7.0\15_Arquivos.dll
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\obj\Debug\net7.0\refint\15_Arquivos.dll
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\obj\Debug\net7.0\15_Arquivos.pdb
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\obj\Debug\net7.0\15_Arquivos.genruntimeconfig.cache
+C:\Users\Aluno\OneDrive - SESISENAISP - Escolas\Curso DEV\2º Semestre\Back-End\15_Arquivos\obj\Debug\net7.0\ref\15_Arquivos.dll

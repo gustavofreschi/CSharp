@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        
+        
+        {
+            "name": "C#: 03_Operacoes",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}\\03_Operacoes.csproj",
+            "launchConfigurationId": "TargetFramework=;03_Operacoes",
+            
+            
+        }
+    ]
+}
