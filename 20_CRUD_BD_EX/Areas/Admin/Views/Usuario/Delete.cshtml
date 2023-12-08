@@ -1,0 +1,45 @@
+@model _20_CRUD_BD_EX.Models.Usuario
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="text-center text-white fw-bold">Tem certeza de que quer deletar este usuário?</h1>
+
+<div>
+    <hr class="bg-white" />
+    <dl class="row text-white">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Imagem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Imagem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Login)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Login)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Senha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Senha)
+        </dd>
+    </dl>
+
+    <hr class="bg-white" />
+    
+    <form class="d-flex justify-content-center align-items-center gap-2" asp-action="Delete">
+        <input type="hidden" asp-for="UsuarioId" />
+        <input type="submit" value="Delete" class="btn btn-outline-danger" /> |
+        <a class="btn btn-outline-info" asp-action="Index">Voltar para a lista</a>
+    </form>
+</div>

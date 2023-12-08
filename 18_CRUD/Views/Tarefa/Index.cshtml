@@ -1,0 +1,30 @@
+@model List<Tarefa>
+
+<h1 class="text-center">Lista de Tarefas</h1>
+
+<table class="table">
+    <thead>
+        <tr class="text-center">
+            <th>Tarefa</th>
+            <th>Concluída</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tarefa in Model)
+        {
+            <tr class="text-center">
+                <td>@tarefa.descricao</td>
+                <td>@(tarefa.concluida ? "Sim" : "Não")</td>
+                <td>
+                    <a class="btn btn-info" asp-action="Editar" asp-route-id="@tarefa.Id">Editar</a> |
+                    <a class="btn btn-danger" asp-action="Deletar" asp-route-id="@tarefa.Id">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="text-center">
+    <a asp-action="Adicionar" class="btn btn-primary">Adicionar Nova Tarefa</a>
+</div>

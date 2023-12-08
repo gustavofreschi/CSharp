@@ -1,0 +1,30 @@
+@model _20_CRUD_BD_EX.Models.Categoria
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="text-center text-white fw-bold">Detalhes da Categoria</h1>
+
+<div class="p-5 border border-2 border-white mt-4">
+    <hr />
+    <dl class="row text-white">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CategoriaNome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CategoriaNome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+    </dl>
+
+    <div class="d-flex justify-content-center align-items-center gap-2">
+        <a class="text-white" asp-action="Edit" asp-route-id="@Model?.CategoriaId">Editar</a> |
+        <a class="text-white" asp-action="Index">Voltar para a lista</a>
+    </div>
+</div>

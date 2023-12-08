@@ -1,0 +1,160 @@
+@model X.PagedList.PagedList<Projeto.Models.Produto>
+
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+@section css {
+    <link rel="stylesheet" href="~/css/image.css">
+    <link rel="stylesheet" href="~/css/produto.css">
+}
+
+@section Scripts {
+    <script src="~/js/Print.js"></script>
+}
+
+<div class="container">
+    <h1 class="text-center no-print">Produtos</h1>
+
+    <p class="text-center mt-3 no-print">
+        <a class="btn btn-outline-primary" asp-action="Create">Adicionar Produto</a>
+    </p>
+
+    <form class="d-flex align-items-center flex-column flex-lg-row gap-2 no-print" asp-action="Index" method="get">
+        <span>Consulta: </span>
+        <input type="text" name="txtFiltro" placeholder="Digite aqui o que procura" value="@ViewBag.txtFiltro"
+            class="form-control">
+        <button class="btn btn-primary show" type="submit"><i class="bi bi-search"></i> Buscar</button>
+
+
+        <select name="selOrdenacao" class="form-control mx-2">
+            <option selected="@((string)ViewBag.Ordem == "Nome")" value="Nome">Ordenar por Nome</option>
+            <option selected="@((string)ViewBag.Ordem == "Categoria")" value="Categoria">Ordenar por Categoria</option>
+            <option selected="@((string)ViewBag.Ordem == "Preco")" value="Preco">Ordenar por Preço</option>
+        </select>
+
+        <button class="btn btn-primary show2" type="submit"><i class="bi bi-search"></i> Buscar</button>
+
+        <hr class="hr1">
+
+        <button class="btn btn-primary" type="submit" name="botao" value="Relatorio"> Relatório</button>
+
+        <button class="btn btn-success ms-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Exportar
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+            <li><button class="dropdown-item" type="submit" name="botao" value="XML"> XML</button></li>
+            <li><button class="dropdown-item" type="submit" name="botao" value="Json"> Json</button></li>
+        </ul>
+    </form>
+
+    <h1 class="only-print p-2 text-center bg-primary text-white shadow rounded m-3"> Relatório
+        de produtos cadastrados</h1>
+    <p class="only-print p-2 text-center shadow rounded m-3"> Filtrado por: @ViewBag.txtFiltro
+        e ordenado por @ViewBag.Ordem</p>
+
+
+    <div class="d-flex flex-wrap justify-content-evenly flex-wrap mt-5">
+
+        @foreach (var item in Model)
+        {
+            <div class="border border-2 border-dark p-2 mb-3 rounded" style="max-width: 620px;">
+
+                <div class="border border-2 p-2 mb-3 rounded">
+
+                    <div class="row no-gutters">
+
+                        <div class="col-md-4 text-center mt-3">
+
+                            <img src="@Html.DisplayFor(modelItem => item.Imagem)" class="img-fluid">
+
+                        </div>
+
+                        <div class="col-md-8">
+
+                            <div class="card-body text-center">
+
+                                <h5 class="card-title fw-bold">@Html.DisplayFor(modelItem => item.ProdutoNome)</h5>
+                                <p class="card-text mt-2">@Html.DisplayFor(modelItem => item.Descricao)</p>
+                                <p class="card-text text-danger fs-5 fw-semibold">R$@Html.DisplayFor(modelItem =>
+                                item.Preco)
+                                </p>
+                                <button class="btn btn-secondary ms-2 dropdown-toggle no-print" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Ações
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <a class="text-black fw-bold fst-italic dropdown-item" asp-action="Edit"
+                                        asp-route-id="@item.ProdutoId">Editar</a>
+
+                                    <a class="text-black fw-bold fst-italic dropdown-item" asp-action="Details"
+                                        asp-route-id="@item.ProdutoId">Detalhes</a>
+                                    <a class="text-black fw-bold fst-italic dropdown-item" asp-action="Delete"
+                                        asp-route-id="@item.ProdutoId">Deletar</a>
+                                </ul>
+
+                                
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        }
+
+    </div>
+
+
+
+    <div class="d-flex justify-content-center no-print">
+        <ul class="pagination">
+            @{
+                string primeira = "";
+                string ultima = "";
+            }
+            @if (!Model.HasPreviousPage)
+                primeira = "disabled";
+            @if (!Model.HasNextPage)
+                ultima = "disabled";
+            <li class="page-item @primeira">
+
+                <a class="page-link" asp-route-pagina="1" asp-route-txtFiltro="@ViewData["txtFiltro"]">&lt;&lt;</a>
+
+            </li>
+            <li class="page-item @primeira">
+                <a class="page-link" asp-route-pagina="@(Model.PageNumber - 1)"
+                    asp-route-txtFiltro="@ViewData["txtFiltro"]">&lt;</a>
+            </li>
+            @for (int i = 1; i <= Model.PageCount; i++)
+            {
+                <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+
+                    <a class="page-link" asp-route-pagina="@i" asp-route-txtFiltro="@ViewData["txtFiltro"]">@i</a>
+
+                </li>
+            }
+            <li class="page-item @ultima">
+                <a class="page-link" asp-route-pagina="@(Model.PageNumber + 1)"
+                    asp-route-txtFiltro="@ViewData["txtFiltro"]">></a>
+            </li>
+            <li class="page-item @ultima">
+
+                <a class="page-link" asp-route-pagina="@Model.PageCount"
+                    asp-route-txtFiltro="@ViewData["txtFiltro"]">>></a>
+
+            </li>
+        </ul>
+    </div>
+</div>

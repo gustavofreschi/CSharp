@@ -1,0 +1,250 @@
+﻿@*model X.PagedList.PagedList<Projeto.Models.Produto>*@
+@model Projeto.Models.ProdutoCategoriaViewModel
+
+@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+@section css {
+    <link rel="stylesheet" href="~/css/style.css">
+}
+
+@section Scripts {
+    <script src="~/js/ancora.js"></script>
+}
+
+
+<div class="container divItens">
+    <div class="row gap-5">
+
+        <div class="d-flex flex-column col-12 col-lg-7 gap-5 justify-content-center align-items-center">
+            <span class="fs-1 text-center fw-bold fst-italic col-12 col-lg-6 span1">Bem-vindo ao
+                <br>
+                Burger Master</span>
+
+            <div class="text-center col-8 col-md-5 col-lg-6">
+                <button class="col-12 col-lg-12 fw-bold botaoCardapio">Ver cardápio</button>
+            </div>
+
+        </div>
+
+
+        <div class="col-12 col-lg-6 text-center position-relative" id="divs">
+            <img id="imgBurger" class="img-fluid"
+                src="https://soubh.uai.com.br/uploads/place/image/321/170950_shutterstock_137819186.jpg">
+            <div class="red"></div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="line"></div>
+
+<section class="container sect">
+    <div class="row">
+        <div class="d-flex flex-column flex-lg-row gap-5">
+            <div class="col-12 col-lg-6 position-relative">
+                <img id="burgerDrink" class="img-fluid"
+                    src="https://img.freepik.com/free-photo/grilled-beef-burger-with-fries-cheese-tomato-generative-ai_188544-8466.jpg">
+                <div class="red2"></div>
+            </div>
+
+            <div class="d-flex flex-column col-12 col-lg-6">
+                <span class="fw-bold gap-5 fst-italic fs-1 sobre">Sobre nós</span>
+                <span id="texto1" class="">A Burger Master é o paraíso dos amantes de hambúrgueres, onde a paixão pela
+                    comida se traduz em experiências culinárias excepcionais.
+                    <br> <br>
+                    Com uma variedade de hambúrgueres artesanais e criativos, ingredientes frescos e um ambiente
+                    acolhedor, somos o destino definitivo para aqueles que buscam uma experiência gastronômica
+                    memorável.
+                    <br> <br>
+
+                    Junte-se a nós e descubra por que somos conhecidos como os mestres dos hambúrgueres.</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="line2"></div>
+
+
+<div class="container mt-5">
+    <div class="row">
+        <span class="text-center fw-bold fst-italic cardapio fs-1">Cardápio</span>
+    </div>
+</div>
+
+
+<form class="d-flex align-items-center gap-2 mt-2" asp-action="Index" method="get">
+    <input type="text" name="txtFiltro" placeholder="Digite aqui o que procura" value="@ViewBag.txtFiltro"
+        class="form-control border-dark">
+    <button id="submit" class="btn btn-danger" type="submit"><i class="bi bi-search"></i></button>
+</form>
+
+<div class="text-center mt-3">
+    @foreach (var item in Model.ListaCategorias)
+    {
+        <a class="btn btn-warning mx-2 border border-2 border-dark categorias" asp-route-txtFiltro="@item.CategoriaNome">@item.CategoriaNome</a>
+    }
+</div>
+
+<!--Cards-->
+
+<div class="d-flex flex-wrap justify-content-evenly flex-wrap mt-5">
+
+    @foreach (var item in Model.ListaProdutos)
+    {
+        <div class="border border-2 border-dark p-2 mb-3 rounded" style="max-width: 620px;">
+
+            <div class="border border-2 p-2 mb-3 rounded">
+
+                <div class="row no-gutters">
+
+                    <div class="col-md-4 text-center mt-3">
+
+                        <img src="@Html.DisplayFor(modelItem => item.Imagem)" class="img-fluid">
+
+                    </div>
+
+                    <div class="col-md-8">
+
+                        <div class="card-body text-center">
+
+                            <h5 class="card-title fw-bold">@Html.DisplayFor(modelItem => item.ProdutoNome)</h5>
+                            <p class="card-text mt-2">@Html.DisplayFor(modelItem => item.Descricao)</p>
+                            <p class="card-text text-danger fs-5 fw-semibold">R$@Html.DisplayFor(modelItem => item.Preco)
+                            </p>
+                            <button data-bs-toggle="modal" data-bs-target="#_@item.ProdutoId"
+                                class="btn btn-danger">Comprar</button>
+
+                            <div class="modal fade" id="_@item.ProdutoId">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+
+                                        <div class="modal-header d-flex justify-content-center">
+                                            <h5>@item.ProdutoNome - @item.Categoria.CategoriaNome</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img class="img-fluid" src="@item.Imagem">
+                                        </div>
+                                        <div class="modal-footer d-flex justify-content-center">
+                                            <p>Tem certeza de que quer comprar o produto <strong>@item.ProdutoNome</strong>
+                                                por @item.Preco.ToString("C")?</p>
+
+                                            <div class="d-flex gap-3 mt-3">
+                                                <button class="btn btn-primary modalbtn"
+                                                    data-bs-dismiss="modal">Comprar</button>
+                                                <button class="btn btn-danger modalbtn"
+                                                    data-bs-dismiss="modal">Voltar</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    }
+
+</div>
+
+<div class="d-flex justify-content-center">
+    <ul class="pagination">
+        @{
+            string primeira = "";
+            string ultima = "";
+        }
+        @if (!Model.ListaProdutos.HasPreviousPage)
+            primeira = "disabled";
+        @if (!Model.ListaProdutos.HasNextPage)
+            ultima = "disabled";
+        <li class="page-item @primeira">
+
+            <a class="page-link" asp-route-pagina="1" asp-route-txtFiltro="@ViewData["txtFiltro"]">&lt;&lt;</a>
+
+        </li>
+        <li class="page-item @primeira">
+            <a class="page-link" asp-route-pagina="@(Model.ListaProdutos.PageNumber - 1)"
+                asp-route-txtFiltro="@ViewData["txtFiltro"]">&lt;</a>
+        </li>
+        @for (int i = 1; i <= Model.ListaProdutos.PageCount; i++)
+        {
+            <li class="page-item @(i == Model.ListaProdutos.PageNumber ? "active" : "")">
+
+                <a class="page-link" asp-route-pagina="@i" asp-route-txtFiltro="@ViewData["txtFiltro"]">@i</a>
+
+            </li>
+        }
+        <li class="page-item @ultima">
+            <a class="page-link" asp-route-pagina="@(Model.ListaProdutos.PageNumber + 1)"
+                asp-route-txtFiltro="@ViewData["txtFiltro"]">></a>
+        </li>
+        <li class="page-item @ultima">
+
+            <a class="page-link" asp-route-pagina="@Model.ListaProdutos.PageCount"
+                asp-route-txtFiltro="@ViewData["txtFiltro"]">>></a>
+
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="line"></div>
+
+<div class="entre-contato col-d-flex justify-content-evenly flex-column flex-lg-row flex-md-row mt-5 d-flex">
+
+    <div class="float-start d-flex flex-column justify-content-center align-items-center" style="max-width: 380px;">
+
+        <p class="fs-3 fw-semibold">Entre em contato conosco!</p>
+
+        <p class="text-center">Entre em contato com o BurgerMaster, queremos tirar suas dúvidas, ouvir suas críticas e
+            sugestões conosco!</p>
+
+        <a href="https://api.whatsapp.com/send?phone=+55&text=oi" target="_blank" class="btn btn-danger w-75"><i
+                class="bi bi-whatsapp"></i> Entrar em contato</a>
+
+    </div>
+
+    <div class="float-end mt-3">
+
+        <p>
+            <i class="bi bi-telephone fs-5 text-danger"></i>
+            <span class="icon-text">+55 (18) 4589-3459</span>
+        </p>
+
+        <p>
+            <i class="bi bi-geo-alt fs-5 text-danger"></i>
+            <span class="icon-text">Mirandópolis</span>
+        </p>
+
+        <p>
+            <i class="bi bi-envelope fs-5 text-danger"></i>
+            <span class="icon-text">contato@burgermaster.com</span>
+        </p>
+
+    </div>
+
+</div>
+
+<a href="https://api.whatsapp.com/send?phone=+55&text=oi" class="zap fixed-bottom"><img class="zapimage"
+        src="https://cdn-icons-png.flaticon.com/512/4138/4138132.png"></a>

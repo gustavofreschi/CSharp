@@ -1,0 +1,33 @@
+@model _20_CRUD_BD_EX.Models.Categoria
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="text-center text-white fw-bold">Cadastrar Categoria</h1>
+<hr />
+<div class="row justify-content-center align-items-center">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CategoriaNome" class="control-label text-white"></label>
+                <input asp-for="CategoriaNome" class="form-control" />
+                <span asp-validation-for="CategoriaNome" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="Descricao" class="control-label text-white"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary mx-auto d-block mt-3" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-center mt-3 fst-italic">
+    <a class="text-white" asp-action="Index">Voltar para a lista</a>
+</div>
+

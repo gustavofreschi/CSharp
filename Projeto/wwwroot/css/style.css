@@ -1,0 +1,351 @@
+#Logo {
+    font-family: 'Kavoon', cursive;
+    color: red;
+    border-bottom: 3px solid red;
+}
+
+.line {
+    background: var(--Gradient, linear-gradient(270deg, #F00 0%, rgba(204, 244, 230, 0.34) 100%));
+    padding: 1px;
+    margin-top: 100px;
+}
+
+.line2 {
+    background: var(--Gradient, linear-gradient(270deg, #F00 0%, rgba(204, 244, 230, 0.34) 100%));
+    padding: 1px;
+    margin-top: 100px;
+}
+
+.red {
+    background-color: #fd2d2daf;
+    position: absolute;
+}
+
+.modalbtn {
+    width: 150px;
+    transition: 500ms;
+}
+
+.modalbtn:hover {
+    transform: scale(0.95);
+}
+
+.zap {
+    position: sticky;
+    left: 200%;
+    bottom: 5%;
+}
+
+.zapimage {
+    width: 70px;
+}
+
+#texto1 {
+    color: rgba(0, 0, 0, 0.663);
+    font-family: 'Poppins', sans-serif;
+}
+
+.red2 {
+    background-color: #fd2d2daf;
+    position: absolute;
+}
+
+.sect {
+    margin-top: 390px;
+}
+
+#burgerDrink {
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+}
+
+.divItens {
+    margin-top: 200px;
+}
+
+.categorias {
+    transition: 500ms;
+}
+
+.categorias:hover {
+    transform: scale(1.05);
+}
+
+#imgBurger {
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+}
+
+
+.botaoCardapio {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    transition: 500ms;
+}
+
+.botaoCardapio:hover {
+    transform: scale(1.02);
+}
+
+.left {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.footer1 {
+    background-color: #ff0000;
+    color: #ffffff;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: -100px;
+}
+
+.contato {
+    margin-bottom: 15vh;
+}
+
+  @media (max-width: 576px) {
+   
+    .divItens {
+        margin-top: 70px;
+    }
+
+    div > #imgBurger {
+        margin-top: 20px;
+        top: 52%;        
+        left: 23%;
+        width: 70%;
+        
+    }
+
+    div > .red {
+        padding: 23%;
+        width: 66%;
+        border-radius: 20px;
+        left: 37%;
+    }
+
+    div > #burgerDrink {
+        width: 80%;
+        bottom: 10%;
+        left: 3%;
+    }
+
+    div > .red2 {
+        padding: 26%;
+        width: 70%;
+        border-radius: 20px;
+        left: -10%;
+        bottom: 10%;
+    }
+
+    .line {
+        margin-top: 300px;
+    }
+
+    .entrar {
+        text-decoration: none;
+    }
+
+    .sect {
+        margin-top: 350px;
+    }
+
+    div > #texto1 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 540px) {
+    .sect {
+        margin-top: 420px;
+    }
+}
+
+@media (min-width: 577px) {
+
+    .divItens {
+        margin-top: 60px;
+    }
+   
+    div > #imgBurger {
+        width: 60%;
+        left: 20%;
+    }
+
+    div > .red {
+        padding: 21%;
+        width: 66%;
+        border-radius: 20px;
+        left: 25%;
+    }
+    
+}
+
+
+@media (min-width: 760px) {
+  
+    .divItens {
+        margin-top: 100px;
+    }
+    
+    div > #imgBurger {
+        margin-top: 20px;
+        width: 67%;
+        left: 33%;
+    }
+
+    div > .red {
+        padding: 150px;
+        width: 66%;
+        border-radius: 20px;
+        left: 42.9%;
+    }
+
+    div > #burgerDrink {
+        width: 70%;
+        bottom: 10%;
+        left: 1%;
+    }
+
+    .line {
+        margin-top: 500px;
+    }
+
+    .sect {
+        margin-top: 420px;
+    }
+
+    div > .red2 {
+        padding: 22%;
+        width: 70%;
+        border-radius: 20px;
+        left: -30%;
+        bottom: 10%;
+    }
+    
+}
+
+@media (min-width: 992px) {
+  
+    .divItens {
+        margin-top: 110px;
+    }
+
+    div > #imgBurger {
+        margin-top: 0px;
+        left: 90%;
+        bottom: 45%;     
+        width: 70%;
+        margin-left: 100px;
+    }
+
+    div > .span1 {
+        margin-right: 230px;
+    }
+
+    div > .botaoCardapio {
+        margin-left: -230px;
+    }
+
+    div > .red {
+        padding: 120px;
+        width: 70%;
+        border-radius: 20px;
+        left: 100%;
+        bottom: 10%;
+        margin-left: 100px;
+    }
+
+    div > #texto1 {
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+    .sect {
+        margin-top: 220px;
+    }
+
+    .line {
+        margin-top: 150px;
+    }
+    
+    div > #divs {
+        margin-left: 20px;
+    }
+
+    div > #burgerDrink {
+        width: 80%;
+        bottom: 10%;
+        left: -5%;
+    }
+
+    div > .red2 {
+        padding: 25%;
+        width: 70%;
+        border-radius: 20px;
+        bottom: 10%;
+        left: -20%;
+    }
+   
+}
+
+@media (min-width: 1200px) {
+
+    .divItens {
+        margin-top: 250px;
+    }
+
+    div > .span1 {
+        margin-right: 250px;
+    }
+
+    div > .botaoCardapio {
+        margin-left: -230px;
+    }
+
+    div > #imgBurger {    
+        width: 70%;
+        margin-left: 100px;
+    }
+
+    div > .red {
+        padding: 25%;
+        width: 70%;
+        border-radius: 20px;
+        left: 100%;
+        bottom: 10%;
+        margin-left: 100px;
+    }
+    
+}
+
+@media (min-width: 1400px) {
+   
+    div > #imgBurger {    
+        width: 70%;
+    }
+
+    div > .red {
+        padding: 25%;
+        width: 70%;
+        border-radius: 20px;
+        left: 100%;
+        bottom: 10%;
+    }
+    
+}

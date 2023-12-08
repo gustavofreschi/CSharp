@@ -1,0 +1,127 @@
+@*model X.PagedList.PagedList<App.Models.Pais>*@
+@model App.Models.PaisContinenteViewModel;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="no-print">Index</h1>
+
+<p class="no-print">
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form class="d-flex align-items-center no-print" asp-action="Index" method="get">
+    <span>Consulta: </span>
+    <input type="text" name="txtFiltro" placeholder="Digite aqui o que procura" value="@ViewBag.txtFiltro"
+        class="form-control">
+    <button class="btn btn-primary me-3" type="submit"><i class="bi bi-search"></i> Buscar</button>
+    <select class="form-control" name="selOrdenacao">
+        <option value="Nome" selected="@((string)ViewBag.Ordem == "Nome")">Ordernar por nome</option>
+        <option value="Nome_Desc" selected="@((string)ViewBag.Ordem == "Nome_Desc")">Ordernar por nome decrescente
+        </option>
+        <option value="Populacao" selected="@((string)ViewBag.Ordem == "Populacao")">Ordernar por população</option>
+        <option value="Continente" selected="@((string)ViewBag.Ordem == "Continente")">Ordernar por continente</option>
+    </select>
+    <button name="botao" value="Relatorio" type="submit" class="btn btn-primary">Relatório</button>
+    <button class="btn btn-success ms-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Exportar
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark">
+        <li><button class="dropdown-item" type="submit" name="botao" value="XML"> XML</button></li>
+        <li><button class="dropdown-item" type="submit" name="botao" value="Json"> Json</button></li>
+    </ul>
+</form>
+
+<h1 class="bg-primary rounded rounded-2 text-white text-center only-print p-3">Filtrado por @ViewBag.txtFiltro |
+    Ordenado por @ViewBag.Ordem</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Capital
+            </th>
+            <th>
+                População
+            </th>
+            <th>
+                Continente
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ListaPaises)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Capital)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Populacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Continente.Nome)
+                </td>
+                <td class="no-print">
+                    <a asp-action="Edit" asp-route-id="@item.IdPaises">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdPaises">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdPaises">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-center no-print">
+    <ul class="pagination">
+        @{
+            string primeira = "";
+            string ultima = "";
+        }
+
+        @if (!Model.ListaPaises.HasPreviousPage)
+            primeira = "disabled";
+
+        @if (!Model.ListaPaises.HasNextPage)
+            ultima = "disabled";
+
+        <li class="page-item @primeira">
+            <a class="page-link" asp-route-pagina="1" asp-route-txtFiltro="@ViewData["txtFiltro"]">&lt;&lt;</a>
+        </li>
+        <li class="page-item @primeira">
+            <a class="page-link" asp-route-pagina="@(Model.ListaPaises.PageNumber - 1)"
+                asp-route-txtFiltro="@ViewData["txtFiltro"]">&lt;</a>
+        </li>
+
+        @for (int i = 1; i <= Model.ListaPaises.PageCount; i++)
+        {
+            <li class="page-item @(i == Model.ListaPaises.PageNumber ? "active" : "")">
+                <a class="page-link" asp-route-pagina="@i" asp-route-txtFiltro="@ViewData["txtFiltro"]">@i</a>
+            </li>
+        }
+
+        <li class="page-item @ultima">
+            <a class="page-link" asp-route-pagina="@(Model.ListaPaises.PageNumber + 1)"
+                asp-route-txtFiltro="@ViewData["txtFiltro"]">></a>
+        </li>
+        <li class="page-item @ultima">
+            <a class="page-link" asp-route-pagina="@Model.ListaPaises.PageCount" asp-route-txtFiltro="@ViewData["txtFiltro"]">>></a>
+        </li>
+
+    </ul>
+</div>
+
+<div class="text-center">
+    @foreach (var item in Model.ListaContinentes)
+    {
+        <a class="btn btn-warning mx-2" asp-route-txtFiltro="@item.Nome">@item.Nome</a>
+    }
+</div>

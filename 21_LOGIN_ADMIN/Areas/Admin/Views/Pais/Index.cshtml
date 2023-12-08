@@ -1,0 +1,54 @@
+@model IEnumerable<Exemplo02.Models.Pais>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1 class="text-center">Países</h1>
+
+<p class="text-center">
+    <a asp-action="Create">Adicionar país</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Capital)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Populacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Continente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capital)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Populacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Continente.Nome)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdPaises">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdPaises">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdPaises">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

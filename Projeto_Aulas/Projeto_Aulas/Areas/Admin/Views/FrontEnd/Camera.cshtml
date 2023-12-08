@@ -1,0 +1,28 @@
+@section scripts{
+    <script src="~/js/Camera.js"></script>
+}
+
+
+<style>
+    .video{
+        width: 400px;
+        height: 200px;
+        transform: scaleX(-1);
+        transition: 500ms;
+    }
+    .foto{
+        margin: 5px;
+        cursor: pointer;
+    }
+    .foto:hover{
+        transform: scale(1.2);
+        transition: transform 0.2s;
+    }
+
+</style>
+
+<h1 class="text-center">Captura de Câmera</h1>
+<video class="video" autoplay></video>
+<button class="btn btn-primary mx-auto d-block botaoCamera">Capturar</button>
+<canvas class="canvas d-none" width="400" height="200"></canvas>
+<div class="fotos d-flex flex-wrap"></div>

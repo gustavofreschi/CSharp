@@ -1,0 +1,60 @@
+@model IEnumerable<_20_CRUD_BD_EX.Models.Filme>
+
+@{
+    ViewData["Title"] = "Filmes";
+}
+
+<h1 class="text-center text-white fst-italic fw-bold">Filmes</h1>
+
+<p class="text-center">
+    <a class="btn btn-outline-warning mt-3" asp-action="Create">Adicionar filme</a>
+</p>
+<table class="table">
+    <thead>
+        <tr class="text-white">
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="text-white">
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ativo)
+            </td>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.Categoria.CategoriaNome)
+            </td>
+            <td>
+                <a class="text-white fst-italic" asp-action="Edit" asp-route-id="@item.JogoId">Editar</a> |
+                <a class="text-white fst-italic" asp-action="Details" asp-route-id="@item.JogoId">Detalhes</a> |
+                <a class="text-white fst-italic" asp-action="Delete" asp-route-id="@item.JogoId">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

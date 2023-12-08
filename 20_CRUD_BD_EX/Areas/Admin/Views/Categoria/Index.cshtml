@@ -1,0 +1,46 @@
+@model IEnumerable<_20_CRUD_BD_EX.Models.Categoria>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-white text-center fw-bold">Cadastrar Categoria</h1>
+
+<div class="row">
+    <p class="col-5 col-lg-1 btn btn-outline-info mx-auto d-block mt-3 text-center">
+        <a class="text-decoration-none text-white fw-bold" asp-action="Create">Cadastrar</a>
+    </p>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr class="text-white">
+            <th>
+                @Html.DisplayNameFor(model => model.CategoriaNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="text-white fst-italic">
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoriaNome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    <a class="text-white" asp-action="Edit" asp-route-id="@item.CategoriaId">Editar</a> |
+                    <a class="text-white" asp-action="Details" asp-route-id="@item.CategoriaId">Detalhes</a> |
+                    <a class="text-white" asp-action="Delete" asp-route-id="@item.CategoriaId">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

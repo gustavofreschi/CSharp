@@ -1,0 +1,50 @@
+@model _20_CRUD_BD_EX.Models.Filme
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3 class="text-center text-white fw-bold fst-italic fs-2">Tem certeza de que quer deletar este filme?</h3>
+<div>
+    <hr class="bg-white" />
+    <dl class="row">
+        <dt class = "col-sm-2 text-white">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10 text-white">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2 text-white">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd class = "col-sm-10 text-white">
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt class = "col-sm-2 text-white">
+            @Html.DisplayNameFor(model => model.Imagem)
+        </dt>
+        <dd class = "col-sm-10 text-white">
+            @Html.DisplayFor(model => model.Imagem)
+        </dd>
+        <dt class = "col-sm-2 text-white">
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+        <dd class = "col-sm-10 text-white">
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+        <dt class = "col-sm-2 text-white">
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+        <dd class = "col-sm-10 text-white">
+            @Html.DisplayFor(model => model.Categoria.CategoriaId)
+        </dd>
+    </dl>
+    
+    <form class="d-flex gap-2 justify-content-center align-items-center" asp-action="Delete">
+        <input type="hidden" asp-for="JogoId" />
+        <input type="submit" value="Deletar" class="btn btn-outline-danger" /> |
+        <a class="btn btn-outline-info" asp-action="Index">Voltar para a lista</a>
+    </form>
+</div>
+
+ <hr class="bg-white" />

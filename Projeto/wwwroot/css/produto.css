@@ -1,0 +1,25 @@
+.show2 {
+    display: none;
+}
+
+.hr1 {
+    display: none;
+    background-color: black;
+    width: 200px;
+}
+
+@media (max-width: 576px) {
+    .show {
+        display: none;
+    }
+
+    .show2 {
+        display: block;
+    }
+
+    .hr1 {
+        display: block;
+    }
+
+
+}

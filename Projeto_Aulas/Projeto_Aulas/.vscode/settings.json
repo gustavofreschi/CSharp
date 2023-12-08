@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net7.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/c29168f7-04fa-461d-87d8-fd88f724b8a9/resourceGroups/Aula/providers/Microsoft.Web/sites/projeto-aulas-gustavo-mir-2023"
+}

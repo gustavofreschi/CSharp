@@ -1,0 +1,28 @@
+@{
+    string nome = "Gustavo";
+}
+    
+
+
+<div class="row justify-content-center align-items-center">
+    <button class="btn col-lg-2 col-5 btn-dark">Clique aqui</button>
+</div>
+
+
+<h1>Olá, @nome</h1>
+<p>Hoje é @DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss").</p>
+
+@{
+    
+    bool mostrarMensagem = true;
+    if(mostrarMensagem == true)
+    {
+        <p>Esta é uma mensagem que entrou no if</p>
+    }
+
+    for (int i = 1; i <= 10; i++)
+    {
+        int res = i*8;
+        <p>8 x @i = @res</p>
+    }
+}
